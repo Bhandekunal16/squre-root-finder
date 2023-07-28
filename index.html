@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>square-root finder</title>
+  </head>
+  <body>
+    <header><h1>square-root finder</h1></header>
+    <div class="content">
+      <h3>please enter number that you want to find square-root</h3>
+      <input type="text" placeholder="number" id="number" />
+      <button onclick="finder()" id="button">press it</button>
+      <div id="ans"></div>
+    </div>
+
+    <script>
+      const number = document.getElementById("number");
+      const ans = document.getElementById("ans");
+      function finder() {
+        ans.innerHTML = "your square root is :" + number.value * number.value;
+      }
+    </script>
+
+    <style>
+      header {
+        text-align: center;
+      }
+      .content {
+        padding: 10%;
+        text-align: center;
+        height: auto;
+        width: auto;
+        background: linear-gradient(to right, #1A237E, #64B5F6);
+        border-radius: 8px;
+        border-color: silver;
+      }
+      #ans {
+        padding: 1%;
+      }
+      #button{
+        background-color: #1A237E;
+        border-color: silver;
+        border-radius: 8px;
+      }
+      input{
+        border-radius: 5px;
+      }
+      body{
+        background-color: antiquewhite;
+      }
+    </style>
+  </body>
+</html>
